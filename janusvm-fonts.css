@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Faustina:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:200,400');
+@import url('lib/fonts/iosevka.css');
+
+body {
+    font-family: 'Faustina', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;
+}
+
+h1, h2, .remark-help-content * {
+    font-family: 'Fira Sans Extra Condensed', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;
+    font-weight: 400;
+}
+
+h3, h4, .remark-slide-number {
+    font-family: 'Fira Sans Extra Condensed', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;
+    font-weight: 200;
+}
+
+.remark-code, .remark-inline-code {
+    font-family: 'Iosevka SS04 Web', 'Consolas', 'Monaco', monospace;
+}

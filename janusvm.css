@@ -1,0 +1,84 @@
+@import url('lib/nord.css');
+@import url('lib/hljs-nord.css');
+
+/* Basic colours  */
+a, a > code { color: var(--nord11); }
+body { color: var(--nord0); }
+
+.remark-slide-number { color: var(--nord3); }
+.remark-slide-scaler {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+/* Code colours */
+.remark-inline-code {
+    color: var(--nord10);
+    background-color: var(--nord6);
+}
+.remark-code-line-highlighted {
+    background-color: var(--nord3);
+    color: var(--nord4);
+    font-weight: bold;
+}
+
+.mjx-chtml { font-size: 110%; }
+
+.inverse {
+    background-color: var(--nord0);
+    color: var(--nord4);
+    text-shadow: none;
+}
+
+.inverse h1, .inverse h2, .inverse h3, .inverse h4 { color: var(--nord6); }
+
+
+/* Syntax highlighting customisations --------------------------------------- */
+
+.hljs-comment { font-style: italic; }
+
+
+/* Custom slide classes ----------------------------------------------------- */
+
+.polarnight, .title-slide {
+    background: radial-gradient(75% 50% at bottom, var(--nord1), var(--nord0));
+    color: var(--nord8);
+    text-shadow: none;
+}
+.polarnight h1, .polarnight h2, .title-slide h1, .title-slide h2 {
+    color: var(--nord4);
+    text-shadow: 0 0 30px var(--nord8);
+}
+.polarnight h3, .polarnight h4, .title-slide h3, .title-slide h4 {
+    color: var(--nord8);
+    text-shadow: 0 0 30px var(--nord8);
+}
+.polarnight .hljs, .title-slide .hljs { background: none; }
+
+.snowstorm {
+    background:
+    radial-gradient(farthest-side at left, var(--nord6), transparent),
+    radial-gradient(90% 25% at 90% 113%, white 90%, transparent 95%),
+    radial-gradient(75% 25% at 20% 110%, white 50%, var(--nord6) 90%, transparent 95%),
+    linear-gradient(to bottom, white, transparent),
+    radial-gradient(at bottom, var(--nord4), var(--nord6));
+    color: var(--nord9);
+}
+.snowstorm h1, .snormstorm h2, .snowstorm h3, .snowstorm h4 {
+    color: var(--nord3);
+    text-shadow: 0 0 30px white;
+}
+
+.aurora {
+    background:
+    radial-gradient(150% 75% at bottom right, var(--nord11), transparent),
+    radial-gradient(farthest-side at bottom left, var(--nord14), transparent),
+    radial-gradient(at bottom, var(--nord7), var(--nord1));
+}
+
+/* Hide slide number on special slides  */
+.inverse .remark-slide-number,
+.polarnight .remark-slide-number,
+.aurora .remark-slide-number,
+.title-slide .remark-slide-number { display: none; }
