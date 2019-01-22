@@ -1,21 +1,65 @@
 @import url('lib/nord.css');
 @import url('lib/hljs-nord.css');
+@import url('gen/nord-rgb.css');
 
-/* Basic colours  */
-a, a > code { color: var(--nord11); }
+
+/* Misc settings ------------------------------------------------------------ */
+
+/* Base text colours */
 body { color: var(--nord0); }
-
+a { color: var(--nord11); }
 .remark-slide-number { color: var(--nord3); }
+
+/* Remove shadows around slides */
 .remark-slide-scaler {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
 }
 
-/* Code colours */
+/* MathJax renders differently between refreshes without !important */
+.mjx-chtml { font-size: 110% !important; }
+
+/* Blockquote customisations */
+blockquote {
+    background-color: rgba(var(--nrgb8), 0.1);
+    padding: 1em;
+    border: none;
+    color: var(--nord8);
+    font-style: italic;
+}
+blockquote p {
+    font-size: 1.25em;
+    display: inline;
+}
+blockquote p:last-child {
+    display: block;
+    margin: 0.5em 0 0 0;
+    text-align: right;
+}
+blockquote p:last-child::before { content: "— "; }
+blockquote p:first-child::before { content: ""; }
+blockquote p:first-child { display: inline; }
+blockquote::before {
+  color: var(--nord8);
+  content: "\201C";
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.1em;
+  vertical-align: -0.4em;
+}
+
+
+/* Code --------------------------------------------------------------------- */
+
+.hljs-comment { font-style: italic; }
 .remark-inline-code {
     color: var(--nord10);
-    background-color: var(--nord6);
+    background-color: rgba(var(--nrgb10), 0.15);
+}
+a .remark-inline-code {
+    color: var(--nord11);
+    background-color: rgba(var(--nrgb11), 0.15);
 }
 .remark-code-line-highlighted {
     background-color: var(--nord3);
@@ -23,23 +67,30 @@ body { color: var(--nord0); }
     font-weight: bold;
 }
 
-.mjx-chtml { font-size: 110%; }
+
+/* Content classes ---------------------------------------------------------- */
+
+.left-column {
+    color: var(--nord4);
+    width: 24%;
+    height: 95%;
+    float: left;
+}
+.left-column h2:last-child, .left-column h3:last-child { color: var(--nord0); }
+
+.right-column {
+    width: 74%;
+    float: right;
+}
+
+/* Slide classes ------------------------------------------------------------ */
 
 .inverse {
     background-color: var(--nord0);
     color: var(--nord4);
     text-shadow: none;
 }
-
 .inverse h1, .inverse h2, .inverse h3, .inverse h4 { color: var(--nord6); }
-
-
-/* Syntax highlighting customisations --------------------------------------- */
-
-.hljs-comment { font-style: italic; }
-
-
-/* Custom slide classes ----------------------------------------------------- */
 
 .polarnight, .title-slide {
     background: radial-gradient(75% 50% at bottom, var(--nord1), var(--nord0));
@@ -56,11 +107,15 @@ body { color: var(--nord0); }
 }
 .polarnight .hljs, .title-slide .hljs { background: none; }
 
+.inverse .left-column *, .polarnight .left-column * { color: var(--nord3); }
+.inverse .left-column :last-child,
+.polarnight .left-column :last-child { color: var(--nord6); }
+
 .snowstorm {
     background:
-    radial-gradient(farthest-side at left, var(--nord6), transparent),
-    radial-gradient(90% 25% at 90% 113%, white 90%, transparent 95%),
-    radial-gradient(75% 25% at 20% 110%, white 50%, var(--nord6) 90%, transparent 95%),
+    radial-gradient(farthest-side at left, var(--nord4), transparent),
+    radial-gradient(90% 25% at 90% 113%, white 80%, transparent),
+    radial-gradient(75% 25% at 20% 110%, white 50%, var(--nord6) 80%, transparent),
     linear-gradient(to bottom, white, transparent),
     radial-gradient(at bottom, var(--nord4), var(--nord6));
     color: var(--nord9);
@@ -75,6 +130,7 @@ body { color: var(--nord0); }
     radial-gradient(150% 75% at bottom right, var(--nord11), transparent),
     radial-gradient(farthest-side at bottom left, var(--nord14), transparent),
     radial-gradient(at bottom, var(--nord7), var(--nord1));
+    color: var(--nord6);
 }
 
 /* Hide slide number on special slides  */

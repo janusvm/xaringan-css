@@ -38,3 +38,4 @@ After writing basically the same `custom.css` for two different presentations, I
 - Syntax highlighting in Nord colours (CSS from [highlight.js](https://github.com/highlightjs/highlight.js))
 - The [Iosevka SS04](https://github.com/be5invis/Iosevka) font for monospace
 - Custom slide classes `polarnight`, `snowstorm`, and `aurora`
+- Blockquotes with special formatting for attribution
