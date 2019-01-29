@@ -69,6 +69,8 @@ a .remark-inline-code {
     font-weight: bold;
 }
 
+/* Disable font ligatures for code  */
+code { font-variant-ligatures: none; }
 
 /* Content classes ---------------------------------------------------------- */
 
